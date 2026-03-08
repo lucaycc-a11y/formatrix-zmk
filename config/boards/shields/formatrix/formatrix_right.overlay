@@ -1,9 +1,8 @@
 /*
- * ForMatrix (Caldera) Right Side
- * Official Caldera PCB pinout
+ * ForMatrix Right Side
  */
 
-#include "caldera.dtsi"
+#include "formatrix.dtsi"
 
 &default_transform { 
     col-offset = <6>;

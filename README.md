@@ -1,6 +1,6 @@
-# ForMatrix (Caldera) ZMK Config
+# ForMatrix (Caldera-based) ZMK Config
 
-ZMK firmware configuration for **ForMatrix** keyboard, based on the Caldera split keyboard design.
+ZMK firmware configuration for **ForMatrix** keyboard.
 
 ## Features
 
@@ -19,62 +19,30 @@ ZMK firmware configuration for **ForMatrix** keyboard, based on the Caldera spli
 
 - **MCU:** nice!nano v2 / Pro Micro nRF52840 / Supermini nRF52840
 - **Layout:** Split keyboard (5×6 per side)
+- **PCB:** Based on [Caldera Keyboard](https://github.com/christianselig/caldera-keyboard)
 
-## Build via GitHub Actions
+## Build
 
-1. Push this repo to GitHub
-2. Go to Actions tab
-3. Run the build workflow
-4. Download the firmware files
+Push to GitHub → Actions will auto-build firmware
+
+## Artifacts
+
+- `formatrix_left_studio.uf2` - Left half with ZMK Studio
+- `formatrix_right.uf2` - Right half
+- `formatrix_settings_reset.uf2` - Settings reset utility
 
 ## Flashing
 
-### First Time (requires reset button or double-tap)
-
-1. Connect left half via USB
-2. Double-tap reset button OR short RST to GND
-3. A USB drive will appear
-4. Copy `caldera_left_studio.uf2` to the drive
-5. Repeat for right half with `caldera_right.uf2`
-
-### After First Flash
-
-Use **Layer 3** (hold LOWER + RAISE) to enter bootloader mode!
+1. Double-tap reset button OR short RST to GND
+2. Copy `.uf2` file to the USB drive that appears
+3. Done!
 
 ## ZMK Studio
 
-1. Flash the left half with the "studio" firmware
+1. Flash left half with `formatrix_left_studio.uf2`
 2. Connect via USB
 3. Open [ZMK Studio](https://zmk.studio/)
 4. Edit your keymap live!
-
-## Bluetooth Pairing
-
-- Layer 2 has BT1-BT5 keys
-- Press BT_CLR to clear all bonds
-- Press BT_SEL 0-4 to switch profiles
-
-## Keymap
-
-```
-Layer 0 (Default):
-┌─────┬─────┬─────┬─────┬─────┬─────┐   ┌─────┬─────┬─────┬─────┬─────┬─────┐
-│ ESC │  1  │  2  │  3  │  4  │  5  │   │  6  │  7  │  8  │  9  │  0  │BKSP │
-├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│ TAB │  Q  │  W  │  E  │  R  │  T  │   │  Y  │  U  │  I  │  O  │  P  │  \  │
-├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│CAPS │  A  │  S  │  D  │  F  │  G  │   │  H  │  J  │  K  │  L  │  ;  │  '  │
-├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│SHFT │  Z  │  X  │  C  │  V  │  B  │   │  N  │  M  │  ,  │  .  │  /  │ ENT │
-├─────┼─────┼─────┼─────┼─────┼─────┤   ├─────┼─────┼─────┼─────┼─────┼─────┤
-│CTRL │ GUI │ ALT │  `  │LOW ↓│ SPC │   │ SPC │RAIS ↑│  -  │  =  │  [  │  ]  │
-└─────┴─────┴─────┴─────┴─────┴─────┘   └─────┴─────┴─────┴─────┴─────┴─────┘
-```
-
-## Credits
-
-- Based on [Caldera Keyboard](https://github.com/christianselig/caldera-keyboard) by Christian Selig
-- Built with [ZMK Firmware](https://zmkfirmware.dev/)
 
 ---
 

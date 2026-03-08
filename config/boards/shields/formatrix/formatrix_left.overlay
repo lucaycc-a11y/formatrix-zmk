@@ -1,9 +1,8 @@
 /*
- * ForMatrix (Caldera) Left Side
- * Official Caldera PCB pinout
+ * ForMatrix Left Side
  */
 
-#include "caldera.dtsi"
+#include "formatrix.dtsi"
 
 &kscan0 {
     col-gpios
