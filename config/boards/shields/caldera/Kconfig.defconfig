@@ -1,0 +1,21 @@
+# ForMatrix (Caldera) Default Kconfig
+
+if SHIELD_CALDERA_LEFT
+
+config ZMK_KEYBOARD_NAME
+    default "ForMatrix L"
+
+config ZMK_BLE_PASSKEY_ENTRY
+    default y
+
+endif
+
+if SHIELD_CALDERA_RIGHT
+
+config ZMK_KEYBOARD_NAME
+    default "ForMatrix R"
+
+config ZMK_BLE_PASSKEY_ENTRY
+    default y
+
+endif
