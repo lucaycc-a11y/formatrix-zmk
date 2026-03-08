@@ -5,17 +5,11 @@ if SHIELD_FORMATRIX_LEFT
 config ZMK_KEYBOARD_NAME
     default "ForMatrix"
 
-config ZMK_BLE_PASSKEY_ENTRY
-    default y
-
 endif
 
 if SHIELD_FORMATRIX_RIGHT
 
 config ZMK_KEYBOARD_NAME
     default "ForMatrix"
-
-config ZMK_BLE_PASSKEY_ENTRY
-    default y
 
 endif
