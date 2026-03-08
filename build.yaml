@@ -1,14 +1,14 @@
 # ForMatrix Build Config
 
 include:
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: formatrix_left
     snippet: studio-rpc-usb-uart
     cmake-args: -DCONFIG_ZMK_STUDIO=y
     artifact-name: formatrix_left_studio
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: formatrix_right
     artifact-name: formatrix_right
-  - board: nice_nano_v2
+  - board: nice_nano//zmk
     shield: settings_reset
     artifact-name: formatrix_settings_reset
