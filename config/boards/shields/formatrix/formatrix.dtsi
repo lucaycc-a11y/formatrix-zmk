@@ -38,10 +38,12 @@ RC(4,0) RC(4,1) RC(4,2) RC(4,3) RC(4,4) RC(4,5)
             , <&pro_micro 18 GPIO_ACTIVE_HIGH>
             , <&pro_micro 15 GPIO_ACTIVE_HIGH>
             ;
-        col-gpios = <&pro_micro 6 (GPIO_ACTIVE_HIGH | GPIO_OUTPUT high)
-        , <&pro_micro 4 (GPIO_ACTIVE_HIGH | GPIO output high)
-        , <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO output low)
-        , <&pro_micro 10 (GPIO_ACTIVE_LOW)>;
+        col-gpios
+            = <&pro_micro 6 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 4 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 5 GPIO_ACTIVE_HIGH>
+            , <&pro_micro 10 GPIO_ACTIVE_HIGH>
+            ;
     };
 
 };
